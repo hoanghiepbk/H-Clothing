@@ -5,13 +5,15 @@ import {ReactComponent as Icon } from "../../assets/icon.svg";
 import { signOutUser } from '../../utils/firebase/firebase.utils';
 import CartIcon from '../../components/cart-icon/cart-icon.component';
 import CartDropdown from '../../components/cart-dropdown/cart-dropdown.component';
-import {UserContext} from '../../contexts/user.context';
-import {CartContext} from '../../contexts/cart.context';
-
+import {useSelector} from 'react-redux';
+import { selectCurrentUser } from '../../store/user/user.selector';
+import { selectIsShowDropdown } from '../../store/cart/cart.selector';
 
 const Navigation = () => {
-  const {currentUser} = useContext(UserContext);
-  const {isShowDropdown} = useContext(CartContext)
+  // const {currentUser} = useContext(UserContext);
+  const isShowDropdown = useSelector(selectIsShowDropdown);
+
+  const currentUser = useSelector(selectCurrentUser);
 
   return (
     <Fragment>
@@ -20,6 +22,7 @@ const Navigation = () => {
           <Icon></Icon>
         </Link>
         <div className='nav-links-container'>
+        {currentUser && <span>{currentUser.email}</span>}
           <Link to='/shop' className='nav-link'>
             SHOP
           </Link>

@@ -1,32 +1,37 @@
 import './home.scss';
 import Directory from '../../components/directory/directory.component';
+import hat from '../../assets/img/hats.png'
+import jackets from '../../assets/img/jackets.png'
+import men from '../../assets/img/men.png'
+import sneakers from '../../assets/img/sneakers.png'
+import womens from '../../assets/img/womens.png'
 
 const Home = () => {
   const categories = [
     {
       id: 1,
       title: 'HATS',
-      imageUrl: 'https://i.ibb.co/cvpntL1/hats.png',
+      imageUrl: hat,
     },
     {
       id: 2,
       title: 'JACKETS',
-      imageUrl: 'https://i.ibb.co/px2tCc3/jackets.png',
+      imageUrl: jackets,
     },
     {
       id: 3,
       title: 'SNEAKERS',
-      imageUrl: 'https://i.ibb.co/0jqHpnp/sneakers.png',
+      imageUrl: sneakers,
     },
     {
       id: 4,
       title: 'WOMENS',
-      imageUrl: 'https://i.ibb.co/GCCdy8t/womens.png',
+      imageUrl: womens,
     },
     {
       id: 5,
       title: 'MENS',
-      imageUrl: 'https://i.ibb.co/R70vBrQ/men.png',
+      imageUrl: men,
     },
   ];
   return (

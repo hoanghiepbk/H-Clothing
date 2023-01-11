@@ -12,6 +12,7 @@ import { PersistGate } from 'redux-persist/integration/react';
 import { store, persistor } from './store/store';
 import { Elements } from "@stripe/react-stripe-js";
 import { stripePromise } from "./utils/stripe/stripe.utils";
+import * as serviceWorkerRegistration from "./serviceWorkerRegistration";
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -30,3 +31,4 @@ root.render(
 );
 
 reportWebVitals();
+serviceWorkerRegistration.register();

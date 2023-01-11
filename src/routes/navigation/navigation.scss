@@ -4,12 +4,22 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 25px;
-  min-width: 500px;
+
+  @media screen and (max-width: 800px) {
+    height: 60px;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+  }
 
   .logo-container {
     height: 100%;
     width: 70px;
     padding: 20px;
+
+    @media screen and (max-width: 800px) {
+      width: 50px;
+      padding: 0px;
+    }
   }
 
   .nav-links-container {
@@ -22,6 +32,10 @@
     .nav-link {
       padding: 10px 15px;
       cursor: pointer;
+    }
+
+    @media screen and (max-width: 800px) {
+      width: 80%;
     }
   }
 }
